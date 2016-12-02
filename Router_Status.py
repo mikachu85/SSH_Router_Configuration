@@ -1,10 +1,26 @@
+__author__ = 'Damien'
+
 import paramiko
 import time
 import sys
 import os
 
 # Predefined ip address to Open Gear
-HOSTNAME = "152.94.73.138" # IP to Open Gear 1
+INDATA = raw_input('\nType a for Open Gear 1, b for Open Gear 2 or any other key to manually insert IP\n\n')
+
+if INDATA == 'a':
+    print '\nOpen Gear 1 Selected'
+    HOSTNAME = '152.94.73.138'
+    # print "\n" + HOSTNAME
+elif INDATA == 'b':
+    print 'Open Gear 2 Selected'
+    HOSTNAME = '152.94.73.139'
+    # print "\n" + HOSTNAME
+else:
+    HOSTNAME = raw_input('Please type in a valid IP address to the Open Gear:\n\n')
+    # print "\n" + HOSTNAME
+
+time.sleep(2)
 
 response = os.system("ping " + HOSTNAME + ' -n ' + '1')
 
