@@ -12,7 +12,7 @@ import sys
 Open_Gear_status.open_gear_stat()
 
 # SSH Package
-# configuration.router_settings_basic()
+configuration.router_settings_basic()
 
 # configuration.router_settings_vlan()
 
